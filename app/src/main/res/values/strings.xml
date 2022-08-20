@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Customer Choice</string>
+    <string name="submit">cart_button</string>
+    <string name="fab_content_desc">cart</string>
+</resources>

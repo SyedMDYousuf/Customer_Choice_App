@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyAccountScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_myacc"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topaccbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnbackk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:clickable="true"
+                android:background="@color/yellow"
+                android:focusable="true"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:foregroundGravity="top"
+                android:src="@drawable/ic_baseline_logout_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/txtmyacc"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/yellow"
+                android:clickable="true"
+                android:focusable="true"/>
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtmyacc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:layout_marginStart="16sp"
+                android:background="@null"
+                android:text="My Account"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/btnbackk"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/accname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:layout_marginStart="16sp"
+                android:background="@null"
+                android:text="Name:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/btnbackk"
+                app:layout_constraintTop_toBottomOf="@+id/txtmyacc" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/accphnno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:layout_marginStart="16sp"
+                android:background="@null"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Mobile:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/btnbackk"
+                app:layout_constraintTop_toTopOf="@+id/accname" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topaccbar"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/relative_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_view1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@color/grey"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/myaddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="My Address"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/image_view1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btn_next_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_bottom"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/yellow"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_txt"
+            android:text="Customer Choice"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@null"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/google_btmimg"
+            android:src="@drawable/google"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/fb_btmimg"
+            android:layout_marginStart="30dp"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/fb_btmimg"
+            android:src="@drawable/fb"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_txt"
+            app:layout_constraintLeft_toLeftOf="@+id/google_btmimg"
+            app:layout_constraintRight_toRightOf="@id/insta_btmimg"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/insta_btmimg"
+            android:src="@drawable/instagram"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_txt"
+            app:layout_constraintLeft_toLeftOf="@+id/fb_btmimg"
+            app:layout_constraintRight_toRightOf="@+id/twt_btmimg"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/twt_btmimg"
+            android:src="@drawable/twitter"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_txt"
+            app:layout_constraintLeft_toRightOf="@+id/insta_btmimg"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/bottom_img"
+        android:src="@drawable/logo1"
+        app:layout_constraintBottom_toTopOf="@+id/cl_bottom"
+        app:layout_constraintTop_toTopOf="@+id/cl_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        android:paddingBottom="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

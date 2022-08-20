@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view_prd_cart_screen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:elevation="3dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_layout_prd_cart_screen"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/image_view_prd_cart_product"
+                android:background="@color/very_light_grey"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_title_cart_prd"
+                android:layout_marginStart="16dp"
+                android:text="Product Name"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/navy_blue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/image_view_prd_cart_product"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_cart_prd_price1"
+                app:layout_constraintTop_toBottomOf="@id/item_title_cart_prd"
+                app:layout_constraintLeft_toRightOf="@+id/image_view_prd_cart_product"
+                android:text="Rs.100.00"
+                android:textColor="@color/navy_blue"
+                android:textStyle="bold"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:paddingBottom="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_cart_prd_price2"
+                app:layout_constraintTop_toBottomOf="@id/item_title_cart_prd"
+                app:layout_constraintLeft_toRightOf="@+id/item_cart_prd_price1"
+                android:text="Rs.100.00"
+                android:textColor="@color/blue"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:paddingBottom="5dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/item_prd_qty"
+                android:text="Qty1:"
+                android:textSize="16sp"
+                android:textColor="@color/navy_blue"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/item_cart_prd_price1"
+                app:layout_constraintLeft_toRightOf="@+id/image_view_prd_cart_product"
+                android:layout_marginStart="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/item_total_price"
+                android:text="Rs.100.00"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/navy_blue"
+                app:layout_constraintTop_toBottomOf="@+id/item_cart_prd_price2"
+
+                android:paddingBottom="5dp"
+
+                />
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

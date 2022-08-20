@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginScreen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/login_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/yellow"
+        app:title="Login"
+        app:titleTextColor="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="@+id/login_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/yellow"
+        android:text="LOGIN WITH PHONE NUMBER"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="visible"
+        />
+    <EditText
+        android:id="@+id/phnnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/login_toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/click_next"
+        android:layout_margin="20dp"
+        android:hint="Mobile Number"
+        android:maxLength="10"
+        android:textSize="14sp"
+        android:inputType="phone"
+        android:visibility="gone"
+
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/click_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="@+id/phnnumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/yellow"
+        android:text="GENERATE OTP"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_mobile_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/login_toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/otp_num"
+        android:text="Mobile Number : "
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        />
+    <EditText
+        android:id="@+id/otp_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/login_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="ENTER OTP HERE"
+        android:maxLength="6"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/click_next2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="@+id/otp_num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/yellow"
+        android:text="NEXT"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+
+        />
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/login_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="NAME"
+        android:layout_margin="20dp"
+        android:maxLength="20"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="@+id/otp_num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/yellow"
+        android:text="SUBMIT"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
